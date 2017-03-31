@@ -1,0 +1,1 @@
+function log(o){console.log(o)}window.onload=function(){document.getElementById("div1").innerHTML="hello world000",log("hi")};

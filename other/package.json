@@ -1,0 +1,31 @@
+{
+  "name": "protal",
+  "version": "1.0.0",
+  "description": "protal",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^6.4.1",
+    "browser-sync": "^2.15.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-file-include": "^0.14.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sequence": "^0.4.6",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-watch": "^4.3.9",
+    "node-sass": "^3.9.3"
+  },
+  "scripts": {
+    "start": "gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "protal"
+  ],
+  "author": "yang",
+  "license": "ISC"
+}

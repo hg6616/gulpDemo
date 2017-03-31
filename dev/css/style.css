@@ -2,3 +2,6 @@
     margin: 0 auto;
     background:blue;
 }
+body{
+    background:url('../image/bg.jpg')
+}
