@@ -9,13 +9,21 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     // 控制任务顺序``
     runSequence = require('gulp-sequence'),
-    htmlmin = require('htmlmin')
+    htmlmin = require('htmlmin'),
+    stylus=require('gulp-stylus')
+    //autoprefixer=require('gulp-autoprefixer')
+    // css 后处理器
+var postcss = require('gulp-postcss')
+// 自动添加浏览器厂商前缀
+var autoprefixer = require('autoprefixer')
+var sourcemaps = require('gulp-sourcemaps');
 var reload = browserSync.reload;
 
 var devPath = 'dev/';
 var distPath = 'dist/';
 var devFilePath = {
     css: devPath + 'css/**/*.css',//匹配所有子目录是两个*号
+    stylus: devPath + 'css/**/*.styl',//匹配所有子目录是两个*号
     js: devPath + 'js/**/*.js',
     image: devPath + 'image/**/*.*',
     html: devPath + 'html/**/*.html'
@@ -31,7 +39,7 @@ var htmlminiOptions = {
     cssmin: true
 };
 gulp.task('dev', ['clean-dist'], function () {
-    //return;
+   // return;
     browserSync({
         server: {
             baseDir: distPath,
@@ -59,8 +67,25 @@ gulp.task('minifycss', function () {
         .pipe(watch(devFilePath.css, {
             ignoreInitial: false
         }))
+         .pipe(postcss([autoprefixer]))
+       // .pipe(autoprefixer())
         // .pipe(rename({ suffix: '.min' }))   //rename压缩后的文件名
-        .pipe(minifycss())   //执行压缩
+       // .pipe(minifycss())   //执行压缩
+        .pipe(gulp.dest(distPath + 'css'))
+        .pipe(reload({
+            stream: true
+        }));   //输出文件夹
+});
+//complie stylus
+gulp.task('stylus', function () {
+    return gulp.src(devFilePath.stylus)    //需要操作的文件
+        .pipe(watch(devFilePath.stylus, {
+            ignoreInitial: false
+        })) 
+       // .pipe(stylus({linenos: true}))
+         .pipe(sourcemaps.init())//sourcemaps 可以关联到stylus文件的哪一行
+    .pipe(stylus())
+    .pipe(sourcemaps.write())
         .pipe(gulp.dest(distPath + 'css'))
         .pipe(reload({
             stream: true
@@ -113,4 +138,4 @@ gulp.task('clean-dist', function () {
 // 　　});
 
 
-gulp.task('default', runSequence('dev', 'jshint', ['minifycss', 'minifyjs', 'minifyhtml', 'moveImage']));
+gulp.task('default', runSequence('dev', 'jshint', ['stylus','minifycss', 'minifyjs', 'minifyhtml', 'moveImage']));

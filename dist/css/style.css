@@ -1,1 +1,11 @@
-.container{margin:0 auto;background:#00f}body{background:url(../image/bg.jpg)}
+body {
+  background: url("../image/bg.jpg");
+}
+body .container {
+  margin: 0 auto;
+  background: #00f;
+  border-radius: 5px;
+  transition: all 0.2s ease 0.1s;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLnN0eWwiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0E7RUFDSSxZQUFnQyx1QkFBaEM7O0FBQ0E7RUFDQSxRQUFRLE9BQVI7RUFDQSxZQUFXLEtBQVg7RUFDQSxlQUFlLElBQWY7RUFDQSxZQUFZLG1CQUFaIiwiZmlsZSI6InN0eWxlLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuYm9keXtcbiAgICBiYWNrZ3JvdW5kOnVybCgnLi4vaW1hZ2UvYmcuanBnJylcbiAgICAuY29udGFpbmVye1xuICAgIG1hcmdpbjogMCBhdXRvO1xuICAgIGJhY2tncm91bmQ6Ymx1ZTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgdHJhbnNpdGlvbjogYWxsIC4ycyBlYXNlIC4xcztcbn1cbn0iXX0= */

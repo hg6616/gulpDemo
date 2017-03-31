@@ -1,0 +1,15 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(20px top, #fff, #000);
+}
+body .con,
+html .con {
+  padding: 0px;
+}
+.css {
+  margin: 0px;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFhLnN0eWwiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUM7QUFBSztFQUNKLFFBQU8sRUFBUDtFQUNBLFNBQVEsRUFBUjtFQUNBLFlBQWtELHNDQUFsRDs7QUFDQTs7RUFDRSxTQUFTLElBQVQ7O0FBTUo7RUFDRSxRQUFRLElBQVIiLCJmaWxlIjoiYWEuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiIGJvZHksaHRtbHtcbiAgbWFyZ2luOjBcbiAgcGFkZGluZzowO1xuICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoMjBweCB0b3AsIHdoaXRlLCBibGFjaykgXG4gIC5jb257XG4gICAgcGFkZGluZzogMHB4O1xuICB9XG4gfVxuXG4gIFxuXG4uY3Nze1xuICBtYXJnaW46IDBweFxufSJdfQ== */
